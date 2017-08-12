@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "serpentine";
+	src: url("font/SerpentineDBol.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "montserrat";
+	src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+body {
+	background-color: black;
+	background-image: url("img/starfieldDark.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	font-family: montserrat;
+	font-size: 14pt;
+}
+
+a {
+	color: lime;
+}
+
+a:visited {
+	color: green;
+}
+
+.center_div {
+    display: flex;
+    align-items: center;
+	justify-content: center;	
+}
+
+#stream {
+    margin-top: 50px;
+}
+
+#header {
+	flex-direction: column;
+}
+
+#banner {
+	max-width: 33%;
+	height: auto;
+}
+
+#header div {
+	max-width: 40%;
+}
+
+#header p {
+	font-weight: bold;
+	font-size: 36pt;
+	font-family: serpentine;
+	margin: 0;
+}
+
+#main_content {
+	display: flex;
+	flex-direction: row;
+}
+
+#main_content div {
+	padding-left: 50px;
+	padding-right: 50px;
+	flex: 1;
+}
+
+.title {
+	color: rgb(231,41,68);
+	font-weight: bold;
+	font-family: serpentine;
+}
+
+td {
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.smalltext {
+	font-size: 10pt;
+	margin-top: -20px;
+}
+
+.titlecell {
+	width: 275px;
+}
+
+.heading {
+	font-size: 18pt;
+	font-family: serpentine;
+}
+
+.past {
+	color: grey;
+}
+
+#countbox1 {
+	font-size: 4vw;
+	font-family: serpentine;
+	text-shadow: 5px 5px 1px #666666;
+}
