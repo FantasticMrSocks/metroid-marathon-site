@@ -1,0 +1,107 @@
+games = [
+	{
+		"name":"Metroid",
+		"start":"2017-09-01T16:00:00Z",
+		"estimate":120,
+		"complete":null,
+		"player":"Mark",
+		"abbr":"m"
+	},
+	{
+		"name":"Metroid II: Return of Samus",
+		"start":null,
+		"estimate":150,
+		"complete":null,
+		"player":"Mike",
+		"abbr":"m2"
+	},
+	{
+		"name":"Super Metroid",
+		"start":null,
+		"estimate":180,
+		"complete":null,
+		"player":"Matte",
+		"abbr":"sm"
+	},
+	{
+		"name":"Metroid Prime",
+		"start":null,
+		"estimate":360,
+		"complete":null,
+		"player":"Nate",
+		"abbr":"mp"
+	},
+	{
+		"name":"Metroid Fusion",
+		"start":null,
+		"estimate":120,
+		"complete":null,
+		"player":"Brian",
+		"abbr":"mf"
+	},
+	{
+		"name":"Metroid Zero Mission",
+		"start":null,
+		"estimate":90,
+		"complete":null,
+		"player":"Mike",
+		"abbr":"mzm"
+	},
+	{
+		"name":"Metroid Prime 2: Echoes",
+		"start":null,
+		"estimate":660,
+		"complete":null,
+		"player":"Mark",
+		"abbr":"mp2"
+	},
+	{
+		"name":"Metroid Prime Pinball",
+		"start":null,
+		"estimate":30,
+		"complete":null,
+		"player":"Sterling",
+		"abbr":"mpp"
+	},
+	{
+		"name":"Metroid Prime Hunters",
+		"start":null,
+		"estimate":480,
+		"complete":null,
+		"player":"Mike",
+		"abbr":"mph"
+	},
+	{
+		"name":"Metroid Prime 3: Corruption",
+		"start":null,
+		"estimate":840,
+		"complete":null,
+		"player":"Brian and Sterling",
+		"abbr":"mp3"
+	},
+	{
+		"name":"Metroid: Other M",
+		"start":null,
+		"estimate":570,
+		"complete":null,
+		"player":"Mike",
+		"abbr":"mom"
+	},
+	{
+		"name":"Metroid Prime: Federation Force",
+		"start":null,
+		"estimate":360,
+		"complete":null,
+		"player":"Everyone",
+		"abbr":"mpff"
+	},
+	{
+		"name":"AM2R",
+		"start":null,
+		"estimate":360,
+		"complete":null,
+		"player":"Mark",
+		"abbr":"am2r",
+		"hidden":true
+	},
+];
