@@ -20,14 +20,14 @@ body {
 }
 
 a {
-	color: lime;
+	color: #ffffff;
 }
 
 a:visited {
-	color: green;
+	color: #aaaaaa;
 }
 
-.center_div {
+.center {
     display: flex;
     align-items: center;
 	justify-content: center;	
@@ -74,13 +74,6 @@ a:visited {
 	font-family: serpentine;
 }
 
-td {
-	padding: 5px;
-	border: 1px solid #ccc;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 .smalltext {
 	font-size: 10pt;
 	margin-top: -20px;
@@ -90,9 +83,16 @@ td {
 	width: 275px;
 }
 
-.heading {
+tr.heading {
 	font-size: 18pt;
 	font-family: serpentine;
+}
+
+p.heading {
+	font-size: 42pt;
+	font-family: serpentine;
+	text-shadow: 3px 3px 1px #666666;
+	margin-bottom: -25px;
 }
 
 .past {
@@ -103,4 +103,19 @@ td {
 	font-size: 4vw;
 	font-family: serpentine;
 	text-shadow: 5px 5px 1px #666666;
+}
+
+#sched {
+	margin-top: 25px;
+	border-collapse: collapse;
+}
+
+#sched td {
+	padding: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.sched_row td {
+	border-top: 3px solid #aaaaaa;
 }
