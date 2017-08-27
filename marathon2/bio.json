@@ -1,0 +1,65 @@
+var bios = [
+    {
+        "name": "Mike",
+        "handle": "Ganon11",
+        "twitch": "ganon11",
+        "twitter": "ganon11",
+        "fave": "Metroid: Zero Mission",
+        "text": "I play Metroid and Zelda games for charity on Twitch. I've been participating in Extra Life for 6 years now, supporting the Connecticut Children's Hospital in Hartford, CT. Hope you enjoy the marathon!",
+        "img": "bios/ridley.png"
+    },
+    {
+        "name": "Mark",
+        "handle": "chumbucket",
+        "twitch": null,
+        "twitter": null,
+        "fave": "Metroid Fusion",
+        "text": "Mark loves Metroid, and doesn't know why she can't crawl.",
+        "img": "bios/mark.jpg"
+    },
+    {
+        "name": "Nate",
+        "handle": "LordCuteThings",
+        "twitch": "LordCuteThings",
+        "twitter": "NathanielKun",
+        "fave": "Metroid Prime",
+        "text": "Nate has a pretty varied array of interests, including drawing, making games, playing games, and unrelated things like anime and hiking. Mostly things that double as metaphors for hitting ones-self against a brick wall until one of those things breaks!",
+        "img": "bios/nate.jpg"
+    },
+    {
+        "name": "Brian",
+        "handle": "Fantastic Mr Socks",
+        "twitch": "FantasticMrSocks",
+        "twitter": "FantastcMrSocks",
+        "fave": "Whichever one Vince likes",
+        "text": "Brian likes RPGs, music, and telling people they're wrong (lovingly). He has a game backlog the size of Mount Everest, so of course he keeps replaying Super Metroid. This is his second time running the stream for Metroid Marathon, so if something goes wrong, yell at him!",
+        "img": "bios/brian.jpg"
+    },
+    {
+        "name": "Sterling",
+        "handle": "phencer42",
+        "twitch": "phencer42",
+        "twitter": "phencer42",
+        "fave": "Metroid Prime 2: Echoes",
+        "text": "Sterling is a busy lad balancing his insistent Dota 2 habit with 5 D&D campaigns, but that doesn't mean he doesn't have enough time to save the galaxy! He's the math guy behind the Hammerspace youtube channel and fills in databases with minute D&D rule details for fun.",
+        "img": "bios/sterling.jpg"
+    },
+    {
+        "name": "Matte",
+        "handle": "Godot",
+        "twitch": "TheFragranceOfDarkCoffee",
+        "twitter": "BlueJinjo",
+        "fave": "Metroid Prime",
+        "text": "Matte likes collecting things in space. Sometimes he makes video games. Sometimes he makes videos. Often, he makes mistakes while playing Metroid. He's also a frequent guest on Brian's stream.",
+        "img": "bios/matte.jpg"
+    },
+    {
+        "name": "Vince",
+        "handle": "A Stuffy Muffin",
+        "twitch": "aStuffyMuffin",
+        "twitter": "aStuffyMuffin",
+        "fave": "Whichever one Brian likes",
+        "text": "Vince has never beaten a Metroid game and is pretty sure that 'Kraid' is a type of alfredo sauce, but is stoked to be here anyway. He streams shmups on Twitch and is mainly here to yell at people for being bad at video games.",
+        "img": "bios/vince.jpg"
+    },
+]
