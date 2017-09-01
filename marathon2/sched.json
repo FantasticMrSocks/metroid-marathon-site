@@ -19,13 +19,13 @@ games = [
         "name":"Super Metroid",
         "start":"2017-09-01T20:00:00Z",
         "estimate":180,
-        "complete":null,
+        "complete":182,
         "player":"Matte",
         "abbr":"sm"
     },
     {
         "name":"Metroid Prime",
-        "start":null,
+        "start":"2017-09-01T23:13:00Z",
         "estimate":360,
         "complete":null,
         "player":"Nate",
