@@ -207,3 +207,11 @@ p.heading {
 .donation {
     margin-bottom: 20px;
 }
+
+#donate_button {
+    font-size: 24px;
+    color: #00BBFF;
+    border: 3px solid #00BBFF;
+    border-radius: 3px;
+    padding: 5px;
+}
