@@ -155,7 +155,7 @@ p.heading {
     margin: 2px;
 }
 
-.bio_divider {
+.divider {
     border: 2px solid #999999;
 }
 
@@ -175,4 +175,35 @@ p.heading {
 
 .bio_links {
     padding: 20px;
+}
+
+#charity_box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#donation_heading {
+    font-family: serpentine;
+    font-size: 24pt;
+}
+
+#donation_list {
+    flex-direction: column;
+    align-items: left;
+}
+
+.donation_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation p {
+    margin: 0;
+    padding: 5px;
+}
+
+.donation {
+    margin-bottom: 20px;
 }
