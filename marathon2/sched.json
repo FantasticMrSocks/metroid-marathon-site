@@ -17,7 +17,7 @@ games = [
     },
     {
         "name":"Super Metroid",
-        "start":null,
+        "start":"2017-09-01T20:00:00Z",
         "estimate":180,
         "complete":null,
         "player":"Matte",
