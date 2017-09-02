@@ -59,13 +59,13 @@ games = [
         "name":"Metroid Prime Pinball",
         "start":"2017-09-02T19:45:00Z",
         "estimate":30,
-        "complete":null,
+        "complete":80,
         "player":"Sterling",
         "abbr":"mpp"
     },
     {
         "name": "Metroid Prime Hunters: First Hunt",
-        "start": null,
+        "start": "2017-09-02T21:12:00Z",
         "estimate": 10,
         "complete": null,
         "player": "Brian",
