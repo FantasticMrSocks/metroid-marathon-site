@@ -27,7 +27,7 @@ games = [
         "name":"Metroid Prime",
         "start":"2017-09-01T23:13:00Z",
         "estimate":360,
-        "complete":null,
+        "complete":384,
         "player":"Nate",
         "abbr":"mp"
     },
