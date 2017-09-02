@@ -64,6 +64,14 @@ games = [
         "abbr":"mpp"
     },
     {
+        "name": "Metroid Prime Hunters: First Hunt",
+        "start": null,
+        "estimate": 10,
+        "complete": null,
+        "player": "Brian",
+        "abbr": "mphfh"
+    },
+    {
         "name":"Metroid Prime Hunters",
         "start":null,
         "estimate":480,
