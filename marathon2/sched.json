@@ -43,13 +43,13 @@ games = [
         "name":"Metroid Zero Mission",
         "start":"2017-09-02T09:00:00Z",
         "estimate":90,
-        "complete":null,
+        "complete":90,
         "player":"Mike",
         "abbr":"mzm"
     },
     {
         "name":"Metroid Prime 2: Echoes",
-        "start":null,
+        "start":"2017-09-02T10:35:00Z",
         "estimate":660,
         "complete":null,
         "player":"Mark",
