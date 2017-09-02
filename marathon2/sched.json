@@ -51,13 +51,13 @@ games = [
         "name":"Metroid Prime 2: Echoes",
         "start":"2017-09-02T10:35:00Z",
         "estimate":660,
-        "complete":null,
+        "complete":450,
         "player":"Mark",
         "abbr":"mp2"
     },
     {
         "name":"Metroid Prime Pinball",
-        "start":null,
+        "start":"2017-09-02T19:45:00Z",
         "estimate":30,
         "complete":null,
         "player":"Sterling",
