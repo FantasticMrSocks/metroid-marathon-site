@@ -32,10 +32,10 @@ games = [
         "abbr":"mp"
     },
     {
-        "name":"2017-09-02T05:50:00Z",
-        "start":null,
+        "name":"Metroid Fusion",
+        "start":"2017-09-02T05:50:00Z",
         "estimate":120,
-        "complete":null,
+        "complete":185,
         "player":"Brian",
         "abbr":"mf"
     },
