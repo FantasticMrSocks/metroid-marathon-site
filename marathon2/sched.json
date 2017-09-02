@@ -67,13 +67,13 @@ games = [
         "name": "Metroid Prime Hunters: First Hunt",
         "start": "2017-09-02T21:12:00Z",
         "estimate": 10,
-        "complete": null,
+        "complete": 7,
         "player": "Brian",
         "abbr": "mphfh"
     },
     {
         "name":"Metroid Prime Hunters",
-        "start":null,
+        "start":"2017-09-02T21:25:00Z",
         "estimate":480,
         "complete":null,
         "player":"Vince and Mike",
