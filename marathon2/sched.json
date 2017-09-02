@@ -41,7 +41,7 @@ games = [
     },
     {
         "name":"Metroid Zero Mission",
-        "start":null,
+        "start":"2017-09-02T09:00:00Z",
         "estimate":90,
         "complete":null,
         "player":"Mike",
