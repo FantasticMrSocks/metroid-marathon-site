@@ -91,13 +91,13 @@ games = [
         "name":"Metroid: Other M",
         "start":"2017-09-03T15:00:00Z",
         "estimate":570,
-        "complete":null,
+        "complete":412,
         "player":"Mike",
         "abbr":"mom"
     },
     {
         "name":"Metroid Prime: Federation Force",
-        "start":null,
+        "start":"2017-09-03T22:10:00Z",
         "estimate":360,
         "complete":null,
         "player":"Everyone",
@@ -109,7 +109,6 @@ games = [
         "estimate":360,
         "complete":null,
         "player":"Mark",
-        "abbr":"am2r",
-        "hidden":true
+        "abbr":"am2r"
     },
 ];
