@@ -83,13 +83,13 @@ games = [
         "name":"Metroid Prime 3: Corruption",
         "start":"2017-09-03T03:59:00Z",
         "estimate":840,
-        "complete":null,
+        "complete":650,
         "player":"Brian and Sterling",
         "abbr":"mp3"
     },
     {
         "name":"Metroid: Other M",
-        "start":null,
+        "start":"2017-09-03T15:00:00Z",
         "estimate":570,
         "complete":null,
         "player":"Mike",
