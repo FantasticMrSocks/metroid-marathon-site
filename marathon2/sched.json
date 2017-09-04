@@ -99,13 +99,13 @@ games = [
         "name":"Metroid Prime: Federation Force",
         "start":"2017-09-03T22:10:00Z",
         "estimate":360,
-        "complete":null,
+        "complete":348,
         "player":"Everyone",
         "abbr":"mpff"
     },
     {
         "name":"AM2R",
-        "start":null,
+        "start":"2017-09-04T03:55:00Z",
         "estimate":360,
         "complete":null,
         "player":"Mark",
