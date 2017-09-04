@@ -107,7 +107,7 @@ games = [
         "name":"AM2R",
         "start":"2017-09-04T03:55:00Z",
         "estimate":360,
-        "complete":null,
+        "complete":205,
         "player":"Mark",
         "abbr":"am2r"
     },
