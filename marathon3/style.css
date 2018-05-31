@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "serpentine";
+    src: url("font/SerpentineDBol.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+.teaser img {
+    width: auto;
+    height: auto;
+}
+
+body {
+    background-color: black;
+    /*background-image: url("img/starfieldDark.png");*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: montserrat;
+    font-size: 14pt;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #aaaaaa;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#stream {
+    margin-top: 50px;
+}
+
+#header {
+    flex-direction: column;
+}
+
+#banner {
+    max-width: 33%;
+    height: auto;
+}
+
+#header div {
+    max-width: 40%;
+}
+
+#header p {
+    font-weight: bold;
+    font-size: 36pt;
+    font-family: serpentine;
+    margin: 0;
+}
+
+#main_content {
+    display: flex;
+    flex-direction: row;
+}
+
+#main_content div {
+    padding-left: 50px;
+    padding-right: 50px;
+    flex: 1;
+}
+
+.title {
+    color: rgb(231,41,68);
+    font-weight: bold;
+    font-family: serpentine;
+}
+
+.smalltext {
+    font-size: 10pt;
+    margin-top: -20px;
+}
+
+.titlecell {
+    width: 275px;
+}
+
+tr.heading {
+    font-size: 18pt;
+    font-family: serpentine;
+}
+
+p.heading {
+    font-size: 3vw;
+    font-family: serpentine;
+    text-shadow: 3px 3px 1px #666666;
+    margin-bottom: 1vw;
+}
+
+.past {
+    color: grey;
+}
+
+#countbox1 {
+    font-size: 3vw;
+    font-family: serpentine;
+    text-shadow: 5px 5px 1px #666666;
+}
+
+#sched {
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+#sched td {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sched_row td {
+    border-top: 3px solid #aaaaaa;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#bios {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.bio_body {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.bio_name {
+    font-size: 18pt;
+    font-family: serpentine;
+    text-shadow: 2px 2px 0 #666666;
+}
+
+.bio_handle {
+    font-size: 14pt;
+    font-family: serpentine;
+    color: #999999
+}
+
+.bio p {
+    margin: 2px;
+}
+
+.divider {
+    border: 2px solid #999999;
+}
+
+.bio_img, .bio_body {
+    padding: 20px;
+}
+
+.bio_img img {
+    box-shadow: 3px 3px #666666;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.bio_fave {
+    color: #999999;
+}
+
+.bio_links {
+    padding: 20px;
+}
+
+#charity_box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#donation_heading {
+    font-family: serpentine;
+    font-size: 24pt;
+}
+
+#donation_list {
+    flex-direction: column;
+    align-items: left;
+}
+
+.donation_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation p {
+    margin: 0;
+    padding: 5px;
+}
+
+.donation {
+    margin-bottom: 20px;
+}
+
+#donate_button {
+    font-size: 24px;
+    color: #00BBFF;
+    border: 3px solid #00BBFF;
+    border-radius: 3px;
+    padding: 5px;
+}
