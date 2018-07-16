@@ -8,20 +8,67 @@
     src: url("font/Montserrat-Regular.ttf") format("truetype");
 }
 
-.teaser img {
-    width: auto;
-    height: auto;
+@media only screen and (orientation:portrait){
+    body {
+        background-image:  url("img/top_repeat.png"), url("img/bottom_repeat.gif") !important;
+        background-repeat: repeat-x, repeat-x !important;
+        background-position: top, bottom !important;
+        background-attachment: fixed, fixed !important;
+    }
+
+    @media screen and (max-height:768px){
+        body {
+            background-size: 96px 126px, 4px 211px;
+        }
+    }
+
+    @media screen and (max-height:480px){
+        body {
+            background-size: 48px 63px, 2px 105px;
+        }
+    }
+
+    #main_content {
+        width: 100% !important;
+    }
+
+    #navi {
+        display: none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    @media screen and (max-height:768px){
+        body {
+            background-size: 409px 202px, 309px 246px, 261px 4px, 4px 211px, 96px 126px;
+        }
+
+        #main_content {
+            width: calc(100% - 409px) !important;
+        }
+    }
+
+    @media screen and (max-height:480px){
+        body {
+            background-size: 204px 101px, 154px 123px, 130px 2px, 2px 105px, 48px 63px;
+        }
+        #main_content {
+            width: calc(100% - 204px) !important;
+        }
+    }
+
 }
 
 body {
     background-color: black;
-    /*background-image: url("img/starfieldDark.png");*/
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url("img/bottom_tank.png"), url("img/top_tank.png"), url("img/tank_repeat.gif"), url("img/bottom_repeat.gif"), url("img/top_repeat.png");
+    background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat-x;
+    background-position: right bottom, right top, right center, right bottom, right top;
+    background-attachment: fixed, fixed, fixed, fixed, fixed;
     color: white;
     font-family: montserrat;
     font-size: 14pt;
+    overflow-x: hidden;
 }
 
 a {
@@ -38,6 +85,34 @@ a:visited {
     justify-content: center;    
 }
 
+#socials {
+    list-style-type: none;
+}
+
+#socials img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#navi {
+    position: fixed;
+    right: 0;
+    top: 190px;
+    min-height: 150px;
+    width: 170px;
+    padding-right: 25px;
+    border-image-source: url("img/border_navi.png");
+    border-image-slice: 24 1 148 24;
+    border-image-width: 24px 0 148px 24px;
+}
+
+.subhead {
+    border-image-source: url("img/border_mid.png");
+    border-image-width: 12px;
+    border-image-slice: 12;
+    padding: 10px;
+}
+
 #stream {
     margin-top: 50px;
 }
@@ -46,31 +121,30 @@ a:visited {
     flex-direction: column;
 }
 
-#banner {
-    max-width: 33%;
+#header img {
+    margin: 10px;
+    max-width: 100%;
     height: auto;
 }
 
-#header div {
-    max-width: 40%;
-}
-
-#header p {
-    font-weight: bold;
-    font-size: 36pt;
-    font-family: serpentine;
-    margin: 0;
+#banner {
+    max-width: 100%;
+    height: auto;
 }
 
 #main_content {
-    display: flex;
-    flex-direction: row;
+    width: calc(100% - 613px);
 }
 
-#main_content div {
-    padding-left: 50px;
-    padding-right: 50px;
-    flex: 1;
+#main_content div.text {
+    margin: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-image-source: url(img/border_bold.png);
+    border-image-slice: 15;
+    border-image-repeat: round;
+    border-image-width: 15px;
+    border-image-outset: 15px;
 }
 
 .title {
@@ -93,21 +167,15 @@ tr.heading {
     font-family: serpentine;
 }
 
-p.heading {
-    font-size: 3vw;
+p.heading, #countbox1{
+    font-size: 2vw;
     font-family: serpentine;
     text-shadow: 3px 3px 1px #666666;
-    margin-bottom: 1vw;
+    margin-bottom: 10px;
 }
 
 .past {
     color: grey;
-}
-
-#countbox1 {
-    font-size: 3vw;
-    font-family: serpentine;
-    text-shadow: 5px 5px 1px #666666;
 }
 
 #sched {
