@@ -85,11 +85,11 @@ a:visited {
     justify-content: center;    
 }
 
-#socials {
+#links {
     list-style-type: none;
 }
 
-#socials img {
+#links img {
     vertical-align: middle;
     margin-right: 10px;
 }
