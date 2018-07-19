@@ -87,6 +87,7 @@ a:visited {
 
 #links {
     list-style-type: none;
+    padding-bottom: 10px;
 }
 
 #links img {
