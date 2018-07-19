@@ -265,7 +265,7 @@ p.heading, #countbox1{
 
 #donation_list {
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
 }
 
 .donation_info {
