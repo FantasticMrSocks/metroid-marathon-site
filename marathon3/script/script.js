@@ -1,3 +1,11 @@
+function convertTime(sqlTime) {
+    // Split timestamp into [ Y, M, D, h, m, s ]
+    var t = sqlTime.split(/[- :]/);
+    // Apply each element to the Date function
+    var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]) + (4 * 60 * 60 * 1000));
+    return d;
+}
+
 function generateTable(){
 
     $.get("script/db.php", {fn:"get",tbl:"games"}, function(data){
@@ -11,8 +19,8 @@ function generateTable(){
             var endTime = null;
             var estimate = null
 
-            if (game["start_time"]) startTime = new Date(game["start_time"]);
-            if (game["end_time"]) endTime = new Date(game["end_time"]);
+            if (game["start_time"]) startTime = convertTime(game["start_time"]);
+            if (game["end_time"]) endTime = convertTime(game["end_time"]);
             if (game["estimate"]) estimate = 60000 * game["estimate"];
 
             $row = $("<tr>", {class: "sched_row", id:game["name"] + "_row"});
