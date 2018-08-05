@@ -95,5 +95,5 @@ CDown.prototype = {
 window.onload=function(){
 	var cdown = new CDown();
 
-	cdown.add(new Date(2018,7,31,12,0,0), "countbox1");
+	cdown.add(new Date("August 31, 2018 12:00:00 GMT-4"), "countbox1");
 };
