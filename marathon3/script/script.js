@@ -6,10 +6,14 @@ function convertTime(sqlTime) {
     return d;
 }
 
-function generateTable(){
+var gamedata = [];
 
+function generateSchedule(){
+
+    $("#sched").parent().append($("<p>", {class:"center", id:"loading"}).append("Loading..."));
     $.get("script/db.php", {fn:"get",tbl:"games"}, function(data){
-        var games = data;
+        gamedata = data;
+        var games = $.extend(true, [], gamedata);
         var rows = [];
 
         for (var i = 0; i < games.length; i++) {
@@ -23,7 +27,7 @@ function generateTable(){
             if (game["end_time"]) endTime = convertTime(game["end_time"]);
             if (game["estimate"]) estimate = 60000 * game["estimate"];
 
-            $row = $("<tr>", {class: "sched_row", id:game["name"] + "_row"});
+            $row = $("<tr>", {class: "sched_row", id: i + "_row"});
 
             $row.append($("<td>", {class: "sched_title"}).append(game["name"]));
             
@@ -35,7 +39,7 @@ function generateTable(){
                 var time = new Date(prevTime.getTime() + (prevEst + (60000 * 15)));
                 game["start_time"] = time.toISOString();
             }
-            $row.append($("<td>").append(time.toLocaleString([], {
+            $row.append($("<td>", {class: "sched_start"}).append(time.toLocaleString([], {
                                                                     weekday: "short",
                                                                     month: "numeric",
                                                                     day: "numeric",
@@ -43,7 +47,7 @@ function generateTable(){
                                                                     minute: "numeric"
                                                                 })));
 
-            $row.append($("<td>").append(endTime ? endTime : minutesToHM(estimate/60000) + " (est.)"));
+            $row.append($("<td>", {class: "sched_end"}).append(endTime ? endTime : minutesToHM(estimate/60000) + " (est.)"));
 
             //$row.append($("<td>").append(game["player_id"]));
 
@@ -53,6 +57,7 @@ function generateTable(){
             }
         }
 
+        $("#loading").css("display","none");
         for ($row of rows) {
             $("#sched").append($row);
         }
@@ -106,7 +111,7 @@ function minutesToHM(num_of_minutes) {
 }
 
 $(document).ready(function(){
-    generateTable();
+    generateSchedule();
     
     //for ($bio of generateBios()) {
     //    $("#bios").append($bio);
