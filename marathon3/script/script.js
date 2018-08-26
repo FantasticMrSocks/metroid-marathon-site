@@ -10,7 +10,7 @@ var gamedata = [];
 
 function generateSchedule(){
 
-    $("#sched").parent().append($("<p>", {class:"center", id:"loading"}).append("Loading..."));
+    $("#sched").parent().append($("<p>", {class:"center", id:"sch_loading"}).append("Schedule Loading..."));
     $.get("script/db.php", {fn:"get",tbl:"games"}, function(data){
         gamedata = data;
         var games = $.extend(true, [], gamedata);
@@ -47,7 +47,7 @@ function generateSchedule(){
                                                                     minute: "numeric"
                                                                 })));
 
-            $row.append($("<td>", {class: "sched_end"}).append(endTime ? endTime : minutesToHM(estimate/60000) + " (est.)"));
+            $row.append($("<td>", {class: "sched_end"}).append(endTime ? minutesToHM(endTime/60000) : minutesToHM(estimate/60000) + " (est.)"));
 
             //$row.append($("<td>").append(game["player_id"]));
 
@@ -57,7 +57,7 @@ function generateSchedule(){
             }
         }
 
-        $("#loading").css("display","none");
+        $("#sch_loading").css("display","none");
         for ($row of rows) {
             $("#sched").append($row);
         }
@@ -65,43 +65,66 @@ function generateSchedule(){
 }
 
 function generateBios(){
-    gen_bios = [];
+    $("#bios").parent().append($("<p>", {class:"center", id:"bio_loading"}).append("Bios Loading..."));
+    $.get("script/db.php", {fn:"get",tbl:"staff"}, function(data){
+        $("#bio_loading").css("display","none");
+        var bios = $.extend(true, [], data);
 
-    for (var i = 0; i < bios.length; i++) {
-        var bio = bios[i];
+        for (var i = 0; i < bios.length; i++) {
+            var bio = bios[i];
 
-        var $bio_div = $("<div class='bio'>");
-        if (i%2 == 0) $bio_div.css("flex-direction", "row-reverse")
-        var img = bio["img"] ? "img/" + bio["img"] : "img/II.png";
-        $bio_div.append($("<div class='bio_img'>").append($("<img src='" + img + "' alt='" + bio["name"] + "' />")));
+            var $bio_div = $("<div class='bio'>");
+            if (i%2 == 0) $bio_div.css("flex-direction", "row-reverse")
+            var img = bio["img"] ? "img/bios/" + bio["img"] : "img/bios/doofy.jpg";
+            $bio_div.append($("<div class='bio_img'>").append($("<img src='" + img + "' alt='" + bio["name"] + "' />")));
 
-        $bio_div.append($("<div class='divider'>"));
+            $bio_div.append($("<div class='divider'>"));
 
-        var $bio_body = $("<div class='bio_body center'>");
-        for (element of ["name","handle","fave","text"]) {
-            if (bio[element]) {
-                if (element == "handle") {
-                    var text = 'aka "' + bio[element] + '"';
-                } else if (element == "fave") {
-                    var text = "Favorite Metroid: " + bio[element]
-                } else {
-                    var text = bio[element]
+            var $bio_body = $("<div class='bio_body center'>");
+            for (element of ["name","handle","fave","bio"]) {
+                if (bio[element]) {
+                    if (element == "handle") {
+                        var text = '"' + bio[element] + '"';
+                    } else if (element == "fave") {
+                        var text = "Favorite Metroid: " + bio[element]
+                    } else {
+                        var text = bio[element]
+                    }
+                    $bio_body.append($("<p class='bio_" + element + "'>").append(text));
                 }
-                $bio_body.append($("<p class='bio_" + element + "'>").append(text));
             }
+
+            var $bio_links = $("<div class='bio_links'>");
+            if (bio["twitter"]) $bio_links.append($("<a href='https://twitter.com/" + bio["twitter"] + "'>").append("<img src='img/t.svg' alt='" + bio["twitter"] + " on Twitter' height='50' width='50'/>"));
+            if (bio["twitch"]) $bio_links.append($("<a href='https://twitch.tv/" + bio["twitch"] + "'>").append("<img src='img/GlitchIcon_Purple_24px.png' alt='" + bio["twitch"] + " on Twitch' height='50' width='50'/>"));
+            $bio_body.append($bio_links);
+
+            $bio_div.append($bio_body);
+
+            $("#bios").append($bio_div);
         }
+    }, "json");
+}
 
-        var $bio_links = $("<div class='bio_links'>");
-        if (bio["twitter"]) $bio_links.append($("<a href='https://twitter.com/" + bio["twitter"] + "'>").append("<img src='img/Twitter_Logo_WhiteOnImage.png' alt='" + bio["twitter"] + "on Twitter' height='50' width='50'/>"));
-        if (bio["twitch"]) $bio_links.append($("<a href='https://twitch.tv/" + bio["twitch"] + "'>").append("<img src='img/Glitch_White_RGB.png' alt='" + bio["twitch"] + "on Twitch' height='50' width='50'/>"));
-        $bio_body.append($bio_links);
+function getDonations() {
+    $.get('https://www.extra-life.org/api/participants/299344/donations', null, function(e){
+        $("#donation_heading").text("Recent Donations");
+        for (var i = 0; i < e.length; i++) {
+            if (i > 4) break;
+            var $donation = $("<div class='donation'>");
+            var $donation_info = $("<div class='donation_info'>");
+            $donation_info.append($("<p class='donation_name'>").text((e[i]["displayName"] ? e[i]["displayName"] : "Anonymous")));
+            $donation_info.append($("<div class='divider'>"));
+            $donation_info.append($("<p class='donation_amount'>").text("$" + e[i]["amount"]));
+            $donation.append($donation_info);
+            if (e[i]["message"]) {
+                $donation.append($("<div class='divider'>"));
+                $donation.append($("<p class='donation_message'>").text(e[i]["message"]));
+            }
 
-        $bio_div.append($bio_body);
-
-        gen_bios.push($bio_div);
-    }
-
-    return gen_bios
+            $("#donation_list").append($donation);
+        }
+    });
 }
 
 function minutesToHM(num_of_minutes) {
@@ -112,27 +135,6 @@ function minutesToHM(num_of_minutes) {
 
 $(document).ready(function(){
     generateSchedule();
-    
-    //for ($bio of generateBios()) {
-    //    $("#bios").append($bio);
-    //}
-
-    // $.get('https://www.extra-life.org/index.cfm?fuseaction=donorDrive.participantDonations&participantID=246713&format=json', null, function(e){
-    //     $("#donation_heading").text("Recent Donations");
-    //     for (var i = 0; i < e.length; i++) {
-    //         if (i > 4) break;
-    //         var $donation = $("<div class='donation'>");
-    //         var $donation_info = $("<div class='donation_info'>");
-    //         $donation_info.append($("<p class='donation_name'>").text((e[i]["donorName"] ? e[i]["donorName"] : "Anonymous")));
-    //         $donation_info.append($("<div class='divider'>"));
-    //         $donation_info.append($("<p class='donation_amount'>").text("$" + e[i]["donationAmount"]));
-    //         $donation.append($donation_info);
-    //         if (e[i]["message"]) {
-    //             $donation.append($("<div class='divider'>"));
-    //             $donation.append($("<p class='donation_message'>").text(e[i]["message"]));
-    //         }
-
-    //         $("#donation_list").append($donation);
-    //     }
-    // });
+    generateBios();
+    getDonations();    
 })
