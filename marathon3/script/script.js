@@ -136,5 +136,5 @@ function minutesToHM(num_of_minutes) {
 $(document).ready(function(){
     generateSchedule();
     generateBios();
-    getDonations();    
+    //getDonations();    
 })
