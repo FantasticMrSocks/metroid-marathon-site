@@ -24,8 +24,8 @@ function generateSchedule(){
             var estimate = null
 
             if (game["start_time"]) startTime = convertTime(game["start_time"]);
-            if (game["end_time"]) endTime = convertTime(game["end_time"]);
-            if (game["estimate"]) estimate = 60000 * game["estimate"];
+            if (game["end_time"]) endTime = game["end_time"];
+            if (game["estimate"]) estimate = game["estimate"];
 
             $row = $("<tr>", {class: "sched_row", id: i + "_row"});
 
@@ -35,7 +35,7 @@ function generateSchedule(){
                 var time = startTime;
             } else {
                 var prevTime = new Date(games[i-1]["start_time"]);
-                var prevEst = 60000 * games[i-1]["estimate"];
+                var prevEst = 60000 * (games[i-1]["end_time"] ? games[i-1]["end_time"] : games[i-1]["estimate"]);
                 var time = new Date(prevTime.getTime() + (prevEst + (60000 * 15)));
                 game["start_time"] = time.toISOString();
             }
@@ -47,7 +47,7 @@ function generateSchedule(){
                                                                     minute: "numeric"
                                                                 })));
 
-            $row.append($("<td>", {class: "sched_end"}).append(endTime ? minutesToHM(endTime/60000) : minutesToHM(estimate/60000) + " (est.)"));
+            $row.append($("<td>", {class: "sched_end"}).append(endTime ? minutesToHM(endTime) : minutesToHM(estimate) + " (est.)"));
 
             //$row.append($("<td>").append(game["player_id"]));
 
