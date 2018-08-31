@@ -107,7 +107,7 @@ function generateBios(){
 }
 
 function getDonations() {
-    $.get('https://www.extra-life.org/api/participants/299344/donations', null, function(e){
+    $.get('https://www.extra-life.org/api/participants/314461/donations', null, function(e){
         $("#donation_heading").text("Recent Donations");
         for (var i = 0; i < e.length; i++) {
             if (i > 4) break;
@@ -136,5 +136,5 @@ function minutesToHM(num_of_minutes) {
 $(document).ready(function(){
     generateSchedule();
     generateBios();
-    //getDonations();    
+    getDonations();    
 })
