@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "serpentine";
+    src: url("font/SerpentineDBol.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+@media only screen and (orientation:portrait){
+    body {
+        background-image:  url("img/top_repeat.png"), url("img/bottom_repeat.gif") !important;
+        background-repeat: repeat-x, repeat-x !important;
+        background-position: top, bottom !important;
+        background-attachment: fixed, fixed !important;
+    }
+
+    @media screen and (max-height:768px){
+        body {
+            background-size: 96px 126px, 4px 211px;
+        }
+    }
+
+    @media screen and (max-height:480px){
+        body {
+            background-size: 48px 63px, 2px 105px;
+        }
+    }
+
+    #main_content {
+        width: 100% !important;
+    }
+
+    #navi {
+        display: none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    @media screen and (max-height:768px){
+        body {
+            background-size: 409px 202px, 309px 246px, 261px 4px, 4px 211px, 96px 126px;
+        }
+
+        #main_content {
+            width: calc(100% - 409px) !important;
+        }
+    }
+
+    @media screen and (max-height:480px){
+        body {
+            background-size: 204px 101px, 154px 123px, 130px 2px, 2px 105px, 48px 63px;
+        }
+        #main_content {
+            width: calc(100% - 204px) !important;
+        }
+    }
+
+}
+
+body {
+    background-color: black;
+    background-image: url("img/bottom_tank.png"), url("img/top_tank.png"), url("img/tank_repeat.gif"), url("img/bottom_repeat.gif"), url("img/top_repeat.png");
+    background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat-x;
+    background-position: right bottom, right top, right center, right bottom, right top;
+    background-attachment: fixed, fixed, fixed, fixed, fixed;
+    color: white;
+    font-family: montserrat;
+    font-size: 14pt;
+    overflow-x: hidden;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #aaaaaa;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+#links {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+#links img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#navi {
+    position: fixed;
+    right: 0;
+    top: 190px;
+    min-height: 150px;
+    width: 170px;
+    padding-right: 25px;
+    border-image-source: url("img/border_navi.png");
+    border-image-slice: 24 1 148 24;
+    border-image-width: 24px 0 148px 24px;
+}
+
+.subhead {
+    border-image-source: url("img/border_mid.png");
+    border-image-width: 12px;
+    border-image-slice: 12;
+    padding: 10px;
+}
+
+#stream {
+    margin-top: 50px;
+}
+
+#header {
+    flex-direction: column;
+}
+
+#header img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+#main_content {
+    width: calc(100% - 613px);
+}
+
+#main_content div.text {
+    margin: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-image-source: url(img/border_bold.png);
+    border-image-slice: 15;
+    border-image-repeat: round;
+    border-image-width: 15px;
+    border-image-outset: 15px;
+}
+
+.title {
+    color: rgb(231,41,68);
+    font-weight: bold;
+    font-family: serpentine;
+}
+
+.smalltext {
+    font-size: 10pt;
+    margin-top: -20px;
+}
+
+.titlecell {
+    width: 275px;
+}
+
+tr.heading {
+    font-size: 18pt;
+    font-family: serpentine;
+}
+
+p.heading, #countbox1{
+    font-size: 2vw;
+    font-family: serpentine;
+    text-shadow: 3px 3px 1px #666666;
+    margin-bottom: 10px;
+}
+
+.past {
+    color: grey;
+}
+
+#sched {
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+#sched td {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sched_row td {
+    border-top: 3px solid #aaaaaa;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#bios {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.bio_body {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.bio_name {
+    font-size: 18pt;
+    font-family: serpentine;
+    text-shadow: 2px 2px 0 #666666;
+}
+
+.bio_handle {
+    font-size: 14pt;
+    font-family: serpentine;
+    color: #999999
+}
+
+.bio p {
+    margin: 2px;
+}
+
+.divider {
+    border: 2px solid #999999;
+}
+
+.bio_img, .bio_body {
+    padding: 20px;
+}
+
+.bio_img img {
+    box-shadow: 3px 3px #666666;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.bio_fave {
+    color: #999999;
+}
+
+.bio_links {
+    padding: 20px;
+}
+
+#charity_box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#donation_heading {
+    font-family: serpentine;
+    font-size: 24pt;
+}
+
+#donation_list {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donation_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation p {
+    margin: 0;
+    padding: 5px;
+}
+
+.donation {
+    margin-bottom: 20px;
+}
+
+#donate_button {
+    font-size: 24px;
+    color: #00BBFF;
+    border: 3px solid #00BBFF;
+    border-radius: 3px;
+    padding: 5px;
+}
