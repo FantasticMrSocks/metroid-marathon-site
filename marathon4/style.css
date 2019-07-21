@@ -8,7 +8,7 @@
     src: url("font/Montserrat-Regular.ttf") format("truetype");
 }
 
-@media only screen and (orientation:portrait){
+/* @media only screen and (orientation:portrait){
     body {
         background-image:  url("img/top_repeat.png"), url("img/bottom_repeat.gif") !important;
         background-repeat: repeat-x, repeat-x !important;
@@ -35,9 +35,9 @@
     #navi {
         display: none;
     }
-}
+} */
 
-@media screen and (orientation:landscape) {
+/* @media screen and (orientation:landscape) {
     @media screen and (max-height:768px){
         body {
             background-size: 409px 202px, 309px 246px, 261px 4px, 4px 211px, 96px 126px;
@@ -57,14 +57,15 @@
         }
     }
 
-}
+} */
 
 body {
-    background-color: black;
-    background-image: url("img/bottom_tank.png"), url("img/top_tank.png"), url("img/tank_repeat.gif"), url("img/bottom_repeat.gif"), url("img/top_repeat.png");
-    background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat-x;
-    background-position: right bottom, right top, right center, right bottom, right top;
-    background-attachment: fixed, fixed, fixed, fixed, fixed;
+    background-color: #181000;
+    background-attachment: local;
+    background-image: url("img/elevator_lobby.png");
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-size: 100%;
     color: white;
     font-family: montserrat;
     font-size: 14pt;
@@ -82,17 +83,12 @@ a:visited {
 .center {
     display: flex;
     align-items: center;
-    justify-content: center;    
-}
-
-#links {
-    list-style-type: none;
-    padding-bottom: 10px;
+    justify-content: center;  
+    flex-direction: column;  
 }
 
 #links img {
     vertical-align: middle;
-    margin-right: 10px;
 }
 
 #navi {
@@ -133,19 +129,13 @@ a:visited {
     height: auto;
 }
 
-#main_content {
-    width: calc(100% - 613px);
-}
-
 #main_content div.text {
-    margin: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-image-source: url(img/border_bold.png);
+    width: 40%;
+    /*border-image-source: url(img/border_bold.png);
     border-image-slice: 15;
     border-image-repeat: round;
     border-image-width: 15px;
-    border-image-outset: 15px;
+    border-image-outset: 15px;*/
 }
 
 .title {
