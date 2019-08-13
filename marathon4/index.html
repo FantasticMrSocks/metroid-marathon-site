@@ -15,12 +15,17 @@
     <div id="main_content" class="center">
         <div id="header" class="center">
             <img src="img/infusion.png" alt="Metroid Marathon 4 logo" style="width:36.45833333%;height:auto;margin-bottom:-4%;"/>
+            <div class="center" style="flex-direction:column;">
+                <p class="heading">Mission begins in</p>
+                <div id="countbox1"></div>
+            </div>
         </div>
-        <div class="center" style="flex-direction:column;">
-            <p class="heading">Mission begins in</p>
-            <div id="countbox1"></div>
-        </div>
-        <div class="text center">
+        <div id="lobby"></div>
+
+        <div id="info" class="sector center sector1">
+            <div id="sector1entrance" class="leftentrance entrance">
+                <div id="sector1elevator" class="elevator"></div>
+            </div>
             <p>Metroid Marathon is a weekend-long celebration of Metroid. Join us as we play through the whole Metroid series, and raise money for <a href="https://www.extra-life.org/">Extra Life</a>! This year's marathon will take place from August 30th to September 2nd.</p>
             <p>The marathon hasn't started yet, but the fun has! Join us for Guaranteed Hype right up to the start of the marathon.</p>
             <p id="links">
@@ -30,22 +35,52 @@
                 <a href="https://twitch.tv/metroid_marathon"><img src="img/GlitchIcon_Purple_64px.png" alt="Metroid_Marathon on Twitch" height="64" width="64" /></a>
             </p>
         </div>
-        <div class="text center">
+
+        <div id="charity" class="sector center sector2">
+            <div id="sector2entrance" class="rightentrance entrance">
+                <div id="sector2elevator" class="elevator"></div>
+            </div>
             <p>Metroid Marathon is supporting <a href="https://www.extra-life.org/">Extra Life</a>, a charity that unites thousands of gamers around the world to play games in support of their local Children's Miracle Network Hospital. Since its inception in 2008, Extra Life has raised more than $40 million for sick and injured kids.</p>
         </div>
 
-        <!--div class="text">
-            <p class="heading">Schedule</p>
-            <table id="sched" class="center">
-                <tr id="sched_heading" class="heading">
-                <td>Game</td>
-                <td>Start time</td>
-                <td>Completion time</td>
-                <td>Player</td>
-                </tr>
-            </table>
-        </div-->
+        <div id="slench" class="sector center sector3">
+            <div id="sector3entrance" class="leftentrance entrance">
+                <div id="sector3elevator" class="elevator"></div>
+            </div>
+            Here is some placeholder text for The Slench
+        </div>
 
+        <div id="watch" class="sector center sector4">
+            <div id="sector4entrance" class="rightentrance entrance">
+                <div id="sector4elevator" class="elevator"></div>
+            </div>
+            <p>Here is some placeholder text for the watch div</p>
+        </div>
+
+        <div id="schedule" class="sector sector5">
+            <div id="sector5glass"></div>
+            <div id="sector5entrance" class="leftentrance entrance">
+                <div id="sector5elevator" class="elevator"></div>
+            </div>
+            <div id="sector5content">
+                <p class="heading">Schedule</p>
+                <table id="sched" class="center">
+                    <tr id="sched_heading" class="heading">
+                    <td>Game</td>
+                    <td>Start time</td>
+                    <td>Completion time</td>
+                    <td>Player</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="bio" class="sector center sector6">
+            <div id="sector6entrance" class="rightentrance entrance">
+                <div id="sector6elevator" class="elevator"></div>
+            </div>
+            <p>Here is some placeholder text for the Bio section</p>
+        </div>
     </div>
     <div id="navi" style="display:none">
         <p>Navigation</p>
