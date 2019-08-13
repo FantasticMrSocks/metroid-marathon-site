@@ -49,8 +49,6 @@ function generateSchedule(){
 
             $row.append($("<td>", {class: "sched_end"}).append(endTime ? endTime : minutesToHM(estimate/60000) + " (est.)"));
 
-            //$row.append($("<td>").append(game["player_id"]));
-
             games[i] = game;
             if (!game["hidden"]) {
                 rows.push($row);
