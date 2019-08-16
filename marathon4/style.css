@@ -70,6 +70,10 @@ a:visited {
     z-index: 1;
 }
 
+#links a {
+    z-index: 2;
+}
+
 #navi {
     position: fixed;
     right: 0;
@@ -170,7 +174,6 @@ a:visited {
     border-image-source: url("img/sector4/border.gif");
     border-image-slice: 16 32;
     right: 0.5vw;
-    z-index: -4;
 }
 
 #sector4entrance {
