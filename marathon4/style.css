@@ -67,6 +67,7 @@ a:visited {
 
 #links img {
     vertical-align: middle;
+    z-index: 1;
 }
 
 #navi {
