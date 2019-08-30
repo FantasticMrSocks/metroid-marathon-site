@@ -122,14 +122,16 @@ $(document).ready(function(){
             if (e.length === 0)
             {
                 $("#donation_list").append("None yet!");
+                return;
             }
+
             for (var i = 0; i < e.length; i++) {
                 if (i > 4) break;
                 var $donation = $("<div class='donation'>");
                 var $donation_info = $("<div class='donation_info'>");
-                $donation_info.append($("<p class='donation_name'>").text((e[i]["donorName"] ? e[i]["donorName"] : "Anonymous")));
+                $donation_info.append($("<p class='donation_name'>").text((e[i]["displayName"] ? e[i]["displayName"] : "The Anonymoose")));
                 $donation_info.append($("<div class='divider'>"));
-                $donation_info.append($("<p class='donation_amount'>").text("$" + e[i]["donationAmount"]));
+                $donation_info.append($("<p class='donation_amount'>").text("$" + e[i]["amount"]));
                 $donation.append($donation_info);
                 if (e[i]["message"]) {
                     $donation.append($("<div class='divider'>"));
