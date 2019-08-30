@@ -108,28 +108,6 @@ function minutesToHM(num_of_minutes) {
     return (hours > 0 ? hours + "h" : "") + (minutes > 0 ? minutes + "m" : "")
 }
 
-/* PIZZA TIME */
-function loadPizzaIngredients(response){
-    console.log(response)
-    var data = JSON.parse(response);
-    data['feed']['entry'].forEach(function(x){
-        var container = document.createElement('tr');
-        var name = document.createElement('td')
-        var moneyFor = document.createElement('td')
-        var moneyAgainst = document.createElement('td')
-        name.insertAdjacentText("afterbegin",x['gsx$name']['$t'])
-        name.classList.add("name")
-        moneyFor.insertAdjacentText("afterbegin",x['gsx$for']['$t'])
-        moneyFor.classList.add("moneyFor")
-        moneyAgainst.insertAdjacentText("afterbegin",x['gsx$against']['$t'])
-        moneyAgainst.classList.add("moneyAgainst")
-        container.insertAdjacentElement("afterbegin",moneyAgainst)
-        container.insertAdjacentElement("afterbegin",moneyFor)
-        container.insertAdjacentElement("afterbegin",name)
-        document.getElementById("master-table").insertAdjacentElement("afterend",container)
-    })
-}
-
 $(document).ready(function(){
     generateSchedule();
     
@@ -166,17 +144,26 @@ $(document).ready(function(){
     );
 
     // PIZZA TIME
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://spreadsheets.google.com/feeds/list/1nFbTeBQ2uFGm6VLprC112hPALU57gZB-FrblntEOZuw/1/public/values?alt=json", true);
-    xhr.onload = function(e) {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                loadPizzaIngredients(xhr.responseText)
-            }
+    $.get('https://spreadsheets.google.com/feeds/list/1nFbTeBQ2uFGm6VLprC112hPALU57gZB-FrblntEOZuw/1/public/values?alt=json',
+        null,
+        function(data) {
+            console.log(data)
+            data['feed']['entry'].forEach(function(x) {
+                var container = document.createElement('tr');
+                var name = document.createElement('td')
+                var moneyFor = document.createElement('td')
+                var moneyAgainst = document.createElement('td')
+                name.insertAdjacentText("afterbegin",x['gsx$name']['$t'])
+                name.classList.add("name")
+                moneyFor.insertAdjacentText("afterbegin",x['gsx$for']['$t'])
+                moneyFor.classList.add("moneyFor")
+                moneyAgainst.insertAdjacentText("afterbegin",x['gsx$against']['$t'])
+                moneyAgainst.classList.add("moneyAgainst")
+                container.insertAdjacentElement("afterbegin",moneyAgainst)
+                container.insertAdjacentElement("afterbegin",moneyFor)
+                container.insertAdjacentElement("afterbegin",name)
+                document.getElementById("master-table").insertAdjacentElement("afterend",container)
+            });
         }
-    };
-    xhr.onerror = function (e) {
-        console.error(xhr.statusText);
-    };
-    xhr.send(null);
+    );
 })
