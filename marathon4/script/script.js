@@ -94,7 +94,7 @@ function generateBios(){
 
             var $bio_links = $("<div class='bio_links'>");
             if (bio["twitter"]) $bio_links.append($("<a href='https://twitter.com/" + bio["twitter"] + "'>").append("<img src='img/t.svg' alt='" + bio["twitter"] + " on Twitter' height='50' width='50'/>"));
-            if (bio["twitch"]) $bio_links.append($("<a href='https://twitch.tv/" + bio["twitch"] + "'>").append("<img src='img/GlitchIcon_Purple_24px.png' alt='" + bio["twitch"] + " on Twitch' height='50' width='50'/>"));
+            if (bio["twitch"]) $bio_links.append($("<a href='https://twitch.tv/" + bio["twitch"] + "'>").append("<img src='img/GlitchIcon_Purple_64px.png' alt='" + bio["twitch"] + " on Twitch' height='50' width='50'/>"));
             $bio_body.append($bio_links);
 
             $bio_div.append($bio_body);
