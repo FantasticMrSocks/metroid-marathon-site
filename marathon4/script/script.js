@@ -86,7 +86,7 @@ function generateBios(){
                     } else if (element == "fave") {
                         var text = "Favorite Metroid: " + bio[element]
                     } else {
-                        var text = bio[element]
+                        var text = bio[element].replace(/\r\n/g, "<br />")
                     }
                     $bio_body.append($("<p class='bio_" + element + "'>").append(text));
                 }
