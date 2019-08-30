@@ -178,7 +178,7 @@ a:visited {
 .sector5 {
     background-image: url("img/sector5/background.gif");
     left: -10.6vw;
-    z-index: 4;
+    z-index: 6;
 }
 
 #sector5entrance {
