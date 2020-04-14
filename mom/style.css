@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "serpentine";
+    src: url("font/SerpentineDBol.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+@media only screen and (orientation:portrait){
+    body {
+        font-size: 24pt !important;
+    }
+
+    #header img {
+        width: 66.666667% !important;
+    }
+
+    .heading, #countbox1 {
+        font-size: 4vw !important;
+    }
+}
+
+body {
+    background: no-repeat center top scroll;
+    background-image: url(img/banner.png),linear-gradient(180deg, rgba(156,201,198,1) 42vw, rgba(9,9,121,1) 58%, rgba(0,212,255,1) 100%);
+    background-size: contain;
+    background-color: #96c4c0;
+    color: black;
+    font-family: montserrat;
+    font-size: 14pt;
+    overflow-x: hidden;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;  
+}
+
+#links img {
+    vertical-align: middle;
+}
+
+#stream {
+    margin-top: 50px;
+}
+
+#header {
+    flex-direction: column;
+    z-index: 1;
+}
+
+#header img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    color: rgb(231,41,68);
+    font-weight: bold;
+    font-family: serpentine;
+}
+
+.smalltext {
+    font-size: 10pt;
+    margin-top: -20px;
+}
+
+.titlecell {
+    width: 275px;
+}
+
+tr.heading {
+    font-size: 18pt;
+    font-family: serpentine;
+}
+
+.sectorcontent {
+    width: 50vw;
+    background: rgba(126, 126, 126, 0.7);
+    padding: 2.5vw;
+    box-shadow: 0px 0px 17px rgba(56, 56, 56, 0.767);
+    border-radius: 6px;
+    min-width: 50vw;
+    margin: 1vw;
+}
+
+#sched {
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+#sched td {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sched_row td {
+    border-top: 3px solid #aaaaaa;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#bios {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.bio_body {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.bio_name {
+    font-size: 18pt;
+    font-family: serpentine;
+    text-shadow: 2px 2px 0 #666666;
+}
+
+.bio_handle {
+    font-size: 14pt;
+    font-family: serpentine;
+    color: #999999
+}
+
+.bio p {
+    margin: 2px;
+}
+
+.divider {
+    border: 2px solid #999999;
+}
+
+.bio_img, .bio_body {
+    padding: 20px;
+}
+
+.bio_img img {
+    box-shadow: 3px 3px #666666;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.bio_fave {
+    color: #999999;
+}
+
+.bio_links {
+    padding: 20px;
+}
+
+#charity_box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#donation_heading {
+    font-family: serpentine;
+    font-size: 24pt;
+}
+
+#donation_list {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donation_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation p {
+    margin: 0;
+    padding: 5px;
+}
+
+.donation {
+    margin-bottom: 20px;
+}
+
+#donate_button {
+    font-size: 24px;
+    color: #00BBFF;
+    border: 3px solid #00BBFF;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+p.heading, #countbox1{
+    font-size: 2vw;
+    font-family: serpentine;
+    text-shadow: 3px 3px 1px #666666;
+    margin-bottom: 10px;
+}

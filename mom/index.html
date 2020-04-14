@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Metroid: Other Marathon</title>
+    <script src="script/jquery-3.1.1.min.js"></script>
+    <script src="script/countdown.js"></script>
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="main_content" class="center">
+        <div id="header" class="center">
+            <div class="center" style="flex-direction:column;margin-top:40vw;">
+                <p class="heading">Mission begins in</p>
+                <div id="countbox1"></div>
+            </div>
+        </div>
+
+        <div class="sectorcontent">
+            <p>Metroid Other Marathon is a weekend-long celebration of video games, charity, and the fun that can be had when the two combine.</p>
+            <p>Join us as we play through a whole pile of Metroid-adjacent games, and raise money for <a href="https://www.rainforesttrust.org/">Rainforest Trust</a>!</p>
+            <p>The marathon hasn't started yet, but the fun has! Join us for Guaranteed Hype right up to the start of the marathon.</p>
+            <p id="links">
+                <a href="https://discordapp.com/invite/rFGagnw"><img src="img/Discord-Logo-White.svg" alt="Metroid Marathon Discord" height="64" width="64" /></a>
+                <a href="https://www.youtube.com/channel/UC_WCEgo-8iuqZKmvy6XXNBw"><img src="img/yt.png" alt="Metroid Marathon on Youtube" height="64" width="64" /></a>
+                <a href="https://twitter.com/MetroidMarathon"><img src="img/t.svg" alt="@MetroidMarathon on Twitter" height="64" width="64" /></a>
+                <a href="https://twitch.tv/metroid_marathon"><img src="img/GlitchIcon_Purple_64px.png" alt="Metroid_Marathon on Twitch" height="64" width="64" /></a>
+            </p>
+        </div>
+
+        <div class="sectorcontent">
+            <div id="live" style="display:none;">
+                <iframe
+                    style="width:100%;"
+                    src="https://player.twitch.tv/?channel=metroid_marathon"
+                    height="480"
+                    width="853"
+                    scrolling="no"
+                    allowfullscreen="true">
+                </iframe>
+            </div>
+            <p>Metroid Marathon is supporting the <a href="https://www.rainforesttrust.org/">Rainforest Trust</a>, whose mission is to purchase and protect threatened rainforest to save endangered wildlife through community engagement and local partnerships. Established in 1988, Rainforest Trust works around the tropics to strategically purchase and protect lands vital for endangered species and indigenous communities.</p>
+        </div>
+
+        <div class="sectorcontent">
+            <p class="heading">Schedule</p>
+            <table id="sched" class="center">
+                <tr id="sched_heading" class="heading">
+                <td>Game</td>
+                <td>Start time</td>
+                <td>Completion time</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sectorcontent" style="display:none;">
+            <p>bio section will go here but for now it is a secret</p>
+        </div>
+    </div>
+    
+</body>
+
+</html>
