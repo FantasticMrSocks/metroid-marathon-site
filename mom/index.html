@@ -13,31 +13,9 @@
 
 <body>
     <div id="main_content" class="center">
-        <div id="header" class="center" style="flex-direction:row;flex-wrap:wrap;">
-            <div style="flex:1;">
-                <img src="img/OtherMetroidFull_fade.png" alt="Metroid: Other Marathon banner" />
-            </div>
-            <div class="center" style="flex-direction:column;flex:1;">
-                <div>
-                    <img src="img/logo.png" alt="Metroid: Other Marathon logo" />
-                </div>
-                <div>
-                    <p class="heading" style="margin-top:-20px;">Mission begins in</p>
-                    <div id="countbox1"></div>
-                </div>
-            </div>
-        </div>
 
-        <div class="center" style="flex-direction:row;width:80vw;align-items:flex-start;flex-wrap:wrap;">
-            <div id="about" class="sectorcontent center" style="flex:1;min-width:400px;">
-                <div class="center" style="flex-direction:row;">
-                    <img src="img/RT.png" alt="Rainforest Trust logo" style="margin: 20px;width:auto;height:150px;"/>
-                    <div>
-                        <p>Metroid Other Marathon is a weekend-long celebration of video games, charity, and the fun that can be had when the two combine.</p>
-                        <p>Join us as we play through a whole pile of Metroid-adjacent games, and raise money for <a href="https://www.rainforesttrust.org/">Rainforest Trust</a>!</p>
-                        <p>The marathon hasn't started yet, but the fun has! Join us for Guaranteed Hype right up to the start of the marathon.</p>
-                    </div>
-                </div>
+        <div class="center" style="flex-direction:row;align-items:flex-start;flex-wrap:wrap;">
+            <div id="about" class="sectorcontent center" style="flex:1;min-width:400px;display:none;">
                 <div id="links">
                     <a href="https://discordapp.com/invite/rFGagnw"><img src="img/Discord-Logo-White.svg" alt="Metroid Marathon Discord" height="64" width="64" /></a>
                     <a href="https://www.youtube.com/channel/UC_WCEgo-8iuqZKmvy6XXNBw"><img src="img/yt.png" alt="Metroid Marathon on Youtube" height="64" width="64" /></a>
@@ -46,8 +24,8 @@
                 </div>
             </div>
             
-            <div class="sectorcontent" style="flex:2;">
-                <div id="live" style="display:none;">
+            <div class="sectorcontent" style="flex:3;">
+                <div id="live">
                     <iframe
                         style="width:100%;"
                         src="https://player.twitch.tv/?channel=metroid_marathon"
@@ -66,6 +44,20 @@
                     <div id="donations">
                         <p id="donation_heading"></p>
                         <div id="donation_list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex:2;">
+                <div><img style="width:100%;height:auto;" src="img/banner.png" /></div>
+                <div class="sectorcontent" id="incentives">
+                    <div class="center" style="flex-direction:row;">
+                        <img src="img/RT.png" alt="Rainforest Trust logo" style="margin: 20px;width:auto;height:150px;"/>
+                        <div>
+                            <p>Metroid Other Marathon is a weekend-long celebration of video games, charity, and the fun that can be had when the two combine.</p>
+                            <p>Join us as we play through a whole pile of Metroid-adjacent games, and raise money for <a href="https://www.rainforesttrust.org/">Rainforest Trust</a>!</p>
+                            <p style="display:none;">The marathon hasn't started yet, but the fun has! Join us for Guaranteed Hype right up to the start of the marathon.</p>
+                        </div>
                     </div>
                 </div>
             </div>
