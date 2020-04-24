@@ -37,8 +37,8 @@ function generateSchedule(){
                 var prevTime = new Date(games[i-1]["start_time"]);
                 var prevEst = 60000 * games[i-1]["estimate"];
                 var time = new Date(prevTime.getTime() + (prevEst + (60000 * (game["name"] == "Offline" ? 0 : 15))));
-                game["start_time"] = time.toISOString();
             }
+            game["start_time"] = time.toISOString();
             $row.append($("<td>", {class: "sched_start"}).append(time.toLocaleString([], {
                                                                     weekday: "short",
                                                                     month: "numeric",
@@ -84,7 +84,7 @@ function generateBios(){
                     if (element == "handle") {
                         var text = `"${bio[element]}"`;
                     } else if (element == "fave") {
-                        var text = `Favorite Non-Metroid: ${bio[element]}`
+                        var text = `Favorite Non-Metroid:<br />${bio[element]}`
                     } else {
                         var text = bio[element]
                     }
