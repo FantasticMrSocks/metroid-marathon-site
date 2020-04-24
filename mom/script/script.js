@@ -141,6 +141,6 @@ $(document).ready(function(){
         $("#progress").append($("<div id='progress_bar'>"))
         $("#progress_bar").append($(`<div id='current_progress' style='width:${Math.min(e["amountRaised"] / e["fundraiserGoalAmount"] * 100, 100)}%;'>`))
         $("#progress_bar").append($(`<p class='goal_label'>Goal: ${formatter.format(e["fundraiserGoalAmount"])}</p>`))
-        $("#current_progress").append($(`<p class='progress_label'>Raised: ${formatter.format(e["amountRaised"])}</p>`))
+        $("#current_progress").append($(`<p class='progress_label'${e["amountRaised"] / e["fundraiserGoalAmount"] < 0.5 ? " style='left:100%;'" : ""}>Raised: ${formatter.format(e["amountRaised"])}</p>`))
     });
 })

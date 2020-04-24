@@ -13,12 +13,12 @@
         font-size: 20pt !important;
     }
 
-    #header img {
+/*    #header img {
         width: 66.666667% !important;
     }
-
+*/
     .heading, #countbox1 {
-        font-size: 4vw !important;
+        font-size: 3vw !important;
     }
 
     #main_content>div {
@@ -36,6 +36,11 @@
     .bio_img img {
         max-width: 300px !important;
         max-height: 300px !important;
+    }
+
+    .sectorcontent {
+        max-width: 90vw; !important;
+	font-size: 15pt !important;
     }
 }
 
@@ -215,10 +220,19 @@ tr.heading {
 
 #donate_button {
     font-size: 24px;
-    color: #00BBFF;
+    color: #000000;
     border: 3px solid #00BBFF;
     border-radius: 3px;
     padding: 5px;
+    background-color: #00BBFF;
+    box-shadow: 3px 3px #666666;
+}
+
+#donate_button:active {
+    box-shadow: 0 0;
+    position: relative;
+    left: 3px;
+    top: 3px;
 }
 
 p.heading, #countbox1{
@@ -230,7 +244,7 @@ p.heading, #countbox1{
 
 #progress_bar {
     width: 80%;
-    background-color: grey;
+    background-color: #AAAAAA;
     height: 1em;
     position: relative;
 }
