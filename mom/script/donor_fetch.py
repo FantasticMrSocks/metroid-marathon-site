@@ -52,6 +52,14 @@ def get_donations(campaign_id, count):
     return None
   return [Donation(d) for d in response['data']]
 
+def get_arbitrary(campaign_id, query):
+  """Gets an arbitrary API endpoint from tiltify"""
+  query_string = f'campaigns/{campaign_id}/{query}'
+  response = make_tiltify_request(query_string)
+  if response['meta']['status'] != 200:
+    return None
+  return(response['data'])
+
 def main():
   """Prints a list of donors"""
   parser = argparse.ArgumentParser()
