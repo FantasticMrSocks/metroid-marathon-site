@@ -152,13 +152,13 @@ tr.heading {
 .bio_name {
     font-size: 18pt;
     font-family: serpentine;
-    text-shadow: 2px 2px 0 #666666;
+    text-shadow: 2px 2px 0 #d49b00;
 }
 
 .bio_handle {
     font-size: 14pt;
     font-family: serpentine;
-    color: #999999
+    color: #d4a200;
 }
 
 .bio p {
@@ -180,7 +180,7 @@ tr.heading {
 }
 
 .bio_fave {
-    color: #999999;
+    color: #bfd400;
 }
 
 .bio_links {
