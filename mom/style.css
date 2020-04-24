@@ -10,7 +10,7 @@
 
 @media only screen and (orientation:portrait){
     body {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
     }
 
     #header img {
@@ -20,11 +20,28 @@
     .heading, #countbox1 {
         font-size: 4vw !important;
     }
+
+    #main_content>div {
+        width: 100% !important;
+    }
+
+    #bios {
+        padding: 0 !important;
+    }
+
+    .bio {
+        padding: 0 !important;
+    }
+
+    .bio_img img {
+        max-width: 300px !important;
+        max-height: 300px !important;
+    }
 }
 
 body {
     background: no-repeat center top scroll;
-    background-image: url(img/banner.png),linear-gradient(180deg, rgba(156,201,198,1) 42vw, rgba(9,9,121,1) 58%, rgba(0,212,255,1) 100%);
+    background-image: linear-gradient(180deg, rgba(156,201,198,1) 42vw, rgba(9,9,121,1) 58%, rgba(0,212,255,1) 100%);
     background-size: contain;
     background-color: #96c4c0;
     color: black;
@@ -85,12 +102,10 @@ tr.heading {
 }
 
 .sectorcontent {
-    width: 50vw;
     background: rgba(126, 126, 126, 0.7);
     padding: 2.5vw;
     box-shadow: 0px 0px 17px rgba(56, 56, 56, 0.767);
     border-radius: 6px;
-    min-width: 50vw;
     margin: 1vw;
 }
 
@@ -103,6 +118,7 @@ tr.heading {
     padding: 10px;
     background-repeat: no-repeat;
     background-position: center;
+    white-space: nowrap;
 }
 
 .sched_row td {
@@ -210,4 +226,31 @@ p.heading, #countbox1{
     font-family: serpentine;
     text-shadow: 3px 3px 1px #666666;
     margin-bottom: 10px;
+}
+
+#progress_bar {
+    width: 80%;
+    background-color: grey;
+    height: 1em;
+    position: relative;
+}
+
+#current_progress {
+    background-color: green;
+    height: 1em;
+    position: relative;
+}
+
+.progress_label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+}
+
+.goal_label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    white-space: nowrap;
 }
