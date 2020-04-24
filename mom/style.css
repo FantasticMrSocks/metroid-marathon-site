@@ -268,3 +268,7 @@ p.heading, #countbox1{
     bottom: 0;
     white-space: nowrap;
 }
+
+#donation_2338234 .donation_message {
+    display:none;
+}

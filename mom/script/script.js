@@ -118,7 +118,7 @@ $(document).ready(function(){
         $("#donation_heading").text("Recent Donations");
         for (var i = 0; i < e.length; i++) {
             if (i > 4) break;
-            var $donation = $("<div class='donation'>");
+            var $donation = $(`<div class='donation' id='donation_${e[i]["id"]}'>`);
             var $donation_info = $("<div class='donation_info'>");
             $donation_info.append($("<p class='donation_name'>").text((e[i]["name"] ? e[i]["name"] : "Anonymous")));
             $donation_info.append($("<div class='divider'>"));
