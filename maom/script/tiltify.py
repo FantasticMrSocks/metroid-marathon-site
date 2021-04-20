@@ -1,4 +1,4 @@
-#!C:\Users\Brian\AppData\Local\Programs\Python\Python36-32\python.exe
+#!/usr/bin/env python3
 
 import cgi
 import json

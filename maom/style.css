@@ -1,0 +1,295 @@
+@font-face {
+    font-family: "serpentine";
+    src: url("font/SerpentineDBol.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+@media only screen and (orientation:portrait){
+    body {
+        font-size: 20pt !important;
+    }
+
+/*    #header img {
+        width: 66.666667% !important;
+    }
+*/
+    .heading, #countbox1 {
+        font-size: 3vw !important;
+    }
+
+    #main_content>div {
+        width: 100% !important;
+    }
+
+    #bios {
+        padding: 0 !important;
+    }
+
+    .bio {
+        padding: 0 !important;
+    }
+
+    .bio_img img {
+        max-width: 300px !important;
+        max-height: 300px !important;
+    }
+
+    .sectorcontent {
+        max-width: 90vw; !important;
+	font-size: 15pt !important;
+    }
+}
+
+body {
+    background: no-repeat center top scroll;
+    /*background-image: linear-gradient(180deg, rgba(156,201,198,1) 42vw, rgba(9,9,121,1) 58%, rgba(0,212,255,1) 100%);*/
+    background-size: contain;
+    background-color: #072190;
+    color: white;
+    font-family: montserrat;
+    font-size: 14pt;
+    overflow-x: hidden;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;  
+}
+
+#links img {
+    vertical-align: middle;
+}
+
+#stream {
+    margin-top: 50px;
+}
+
+#header {
+    flex-direction: column;
+    z-index: 1;
+}
+
+#header img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    color: rgb(231,41,68);
+    font-weight: bold;
+    font-family: serpentine;
+}
+
+.smalltext {
+    font-size: 10pt;
+    margin-top: -20px;
+}
+
+.titlecell {
+    width: 275px;
+}
+
+tr.heading, .incentive_heading {
+    font-size: 18pt;
+    font-family: serpentine;
+}
+
+.sectorcontent {
+    background: rgba(126, 126, 126, 0.7);
+    padding: 2.5vw;
+    box-shadow: 0px 0px 17px rgba(56, 56, 56, 0.767);
+    border-radius: 6px;
+    margin: 1vw;
+}
+
+#sched {
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+#sched td {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    white-space: nowrap;
+}
+
+.sched_row td {
+    border-top: 3px solid #aaaaaa;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#bios {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.bio_body {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.bio_name {
+    font-size: 18pt;
+    font-family: serpentine;
+    text-shadow: 2px 2px 0 #d49b00;
+}
+
+.bio_handle {
+    font-size: 14pt;
+    font-family: serpentine;
+    color: #d4a200;
+}
+
+.bio p {
+    margin: 2px;
+}
+
+.divider {
+    border: 2px solid #999999;
+}
+
+.bio_img, .bio_body {
+    padding: 20px;
+}
+
+.bio_img img {
+    box-shadow: 3px 3px #666666;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.bio_fave {
+    color: #bfd400;
+}
+
+.bio_links {
+    padding: 20px;
+}
+
+#charity_box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+#donation_heading {
+    font-family: serpentine;
+    font-size: 24pt;
+}
+
+#donation_list {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donation_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation p {
+    margin: 0;
+    padding: 5px;
+}
+
+.donation {
+    margin-bottom: 20px;
+}
+
+#donate_button {
+    font-size: 24px;
+    color: #000000;
+    border: 3px solid #00BBFF;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #00BBFF;
+    box-shadow: 3px 3px #666666;
+}
+
+#donate_button:active {
+    box-shadow: 0 0;
+    position: relative;
+    left: 3px;
+    top: 3px;
+}
+
+p.heading, #countbox1{
+    font-size: 2vw;
+    font-family: serpentine;
+    text-shadow: 3px 3px 1px #666666;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.progress_bar {
+    width: 80%;
+    background-color: #AAAAAA;
+    height: 1em;
+    position: relative;
+}
+
+.current_progress {
+    background-color: green;
+    height: 1em;
+    position: relative;
+}
+
+.progress_label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+}
+
+.goal_label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    white-space: nowrap;
+}
+
+#donation_2338234 .donation_message {
+    display:none;
+}
+
+.poll_progress {
+    margin-bottom: 1.5em;
+}
+
+.milestone, .reward, .poll, .target {
+    border: 2px solid #999999;
+    padding: 10px;
+    padding-top: 0;
+    margin: 10px;
+    box-shadow: 3px 3px #666666;
+}
+
+.milestone {
+    padding-bottom: 1.5em;
+}
+
+.current_progress.complete {
+    background-image: linear-gradient(60deg, #ffd932 0%, #ffff30 17%, #ffffff 50%, #fbff28 84%, #ffcd2b 100%);
+}

@@ -1,4 +1,4 @@
-#!C:\Users\Brian\AppData\Local\Programs\Python\Python36-32\python.exe
+#!/usr/bin/env python3
 import argparse
 import requests
 
@@ -16,7 +16,7 @@ class Donation: # pylint: disable=R0903
 def get_access_token():
   """Reads the access token from .accesstoken"""
   token = None
-  with open('.accesstoken', 'r') as file:
+  with open('../../../../.accesstoken', 'r') as file:
     token = file.read().rstrip()
   return token
 
