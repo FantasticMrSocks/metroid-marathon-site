@@ -13,13 +13,10 @@
 
 <body>
     <div id="main_content" class="center">
-
         <div class="center" style="flex-direction:row;align-items:flex-start;flex-wrap:wrap;">
-            
             <div class="sectorcontent" style="flex:3;">
-                <div id="live">
+                <div id="live" class="center">
                     <div style="flex:8;">
-                        <div><img style="width:100%;height:auto;" src="img/banner.png" /></div>
                         <!--div class="sectorcontent" id="incentives">
                             <p class="heading">Donation Incentives</p>
                             <div id="rewards"></div>
@@ -27,35 +24,50 @@
                             <div id="polls"></div>
                             <div id="milestones"></div>
                         </div-->
-                        <div class="center">
+                        <div class="center" style="padding-bottom:10px;"><img style="width:50%;height:auto;" src="img/banner.png" /></div>
+                        <!--div class="center">
                             <p class="heading">Mission Begins In</p>
                             <div id="countbox1"></div>
-                        </div>
+                        </div-->
                     </div>
-                    <!--iframe
-                        style="width:100%;"
-                        src="https://player.twitch.tv/?channel=metroid_marathon"
-                        height="480"
-                        width="853"
-                        scrolling="no"
-                        allowfullscreen="true">
-                    </iframe-->
+                    <div style="padding-bottom:56.25%;position:relative;width:100%">
+                        <iframe
+                            style="position:absolute;width:100%;height:100%;left:0px;top:0px;"
+                            src="https://player.twitch.tv/?channel=metroid_marathon"
+                            height="100%"
+                            width="100%"
+                            scrolling="no"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+                    <p><a href="https://streamlabscharity.com/teams/@metroid-marathon/metroid-another-other-marathon" target="_blank"><img src="img/Panel-DonateNow.png" alt="Donate button" /></a></p>
+                    <!--div id="links">
+                        <p>Follow Metroid Marathon on social media!</p>
+                        <a href="https://discordapp.com/invite/rFGagnw"><img src="img/Discord-Logo-White.svg" alt="Metroid Marathon Discord" height="64" width="64" /></a>
+                        <a href="https://www.youtube.com/channel/UC_WCEgo-8iuqZKmvy6XXNBw"><img src="img/yt.png" alt="Metroid Marathon on Youtube" height="64" width="64" /></a>
+                        <a href="https://twitter.com/MetroidMarathon"><img src="img/t.svg" alt="@MetroidMarathon on Twitter" height="64" width="64" /></a>
+                        <a href="https://twitch.tv/metroid_marathon"><img src="img/GlitchIcon_Purple_64px.png" alt="Metroid_Marathon on Twitch" height="64" width="64" /></a>
+                    </div-->
                 </div>
-                <div id="charity">
+            </div>
+            <div class="sectorcontent" style="flex:2">
+                <div style="flex-direction:row;align-items:center;flex-wrap:wrap;display:flex;">
+                    <img style="flex:1;" src="img/Direct-Relief-Square.png" alt="Direct Relief logo" style="margin:20px;width:auto;height:150px;"/>
+                    <p style="flex:3;">Metroid: Another Other Marathon is supporting Direct Relief!</p>
+                </div>
+                <div id="charity" class="center">
                     <div id="progress" class="center">
                         <div class="center" style="flex-direction:row;">
-                            <img src="img/Direct-Relief-Square.png" alt="Direct Relief logo" style="margin: 20px;width:auto;height:150px;"/>
                             <div>
+                                <p>Direct Relief is a humanitarian aid organization, active in all 50 states and more than 80 countries, with a mission to improve the health and lives of people affected by poverty or emergencies – without regard to politics, religion, or ability to pay.</p>
+                                <p>Direct Relief has responded to many disasters in the past few years including Hurricane Harvey, Irma, Maria, the California Wildfires, and the Australian Brush Fires.</p>
+                                <p>Additionally, Direct Relief provides medical aid and supplies to those in poverty as well as medical clinics worldwide.</p>
+                            </div>
+                            <!--div>
                                 <p>Metroid Another Other Marathon is a weekend-long celebration of video games, charity, and the fun that can be had when the two combine.</p>
                                 <p>Join us as we play through a whole pile of Metroid-adjacent games, and raise money for <a href="https://www.directrelief.org/">Direct Relief</a>!</p>
                                 <p>The marathon hasn't started yet, but the fun has! Join us for Guaranteed Hype right up to the start of the marathon.</p>
-                            </div>
-                        </div>
-                        <div id="links">
-                            <a href="https://discordapp.com/invite/rFGagnw"><img src="img/Discord-Logo-White.svg" alt="Metroid Marathon Discord" height="64" width="64" /></a>
-                            <a href="https://www.youtube.com/channel/UC_WCEgo-8iuqZKmvy6XXNBw"><img src="img/yt.png" alt="Metroid Marathon on Youtube" height="64" width="64" /></a>
-                            <a href="https://twitter.com/MetroidMarathon"><img src="img/t.svg" alt="@MetroidMarathon on Twitter" height="64" width="64" /></a>
-                            <a href="https://twitch.tv/metroid_marathon"><img src="img/GlitchIcon_Purple_64px.png" alt="Metroid_Marathon on Twitch" height="64" width="64" /></a>
+                            </div-->
                         </div>
                     </div>
                     <div id="donations">
@@ -63,6 +75,12 @@
                         <div id="donation_list"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div style="flex-direction:row;width:100%;flex-wrap:wrap;align-items:flex-start;" class="center">
+            <div class="sectorcontent" style="flex:3;">
+                <p class="heading">The Team</p>
+                <div id="bios"></div>
             </div>
             <div class="sectorcontent" style="flex:2;">
                 <p class="heading">Schedule</p>
@@ -74,14 +92,6 @@
                     </tr>
                 </table>
             </div>
-        </div>
-
-        <div style="flex-direction:row;width:100%;flex-wrap:wrap;align-items:flex-start;" class="center">
-
-            <!--div class="sectorcontent" style="flex:3;">
-                <p class="heading">The Team</p>
-                <div id="bios"></div>
-            </div-->
         </div>
     </div>
     
